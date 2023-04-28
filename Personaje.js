@@ -1,9 +1,9 @@
 class Personaje{
-    constructor(){
-        this.nombre = "demo"
-        // this.vida = this.generarVida();
-        // this.velocidad = this.generarVelocidad();
-        this.ataqueUno;
+    constructor(nombre){
+        this.nombre = nombre;
+        this.vida = this.generarVida();
+        this.velocidad = this.generarVelocidad();
+        this.ataqueUno = 100;
         this.ataqueDos;
     }
 
@@ -39,18 +39,19 @@ class Personaje{
     }
 
     atacar( enemigo){
-        console.log(enemigo)
-        // if(this.velocidad > enemigo.velocidad){
-        //     if(){
+        if(this.velocidad > enemigo.velocidad){ // quien ataca primero
+            if(Math.random() >= 0.5){  //usa habilidad uno
+                if(this.ataqueUno){
+                    
+                }
+            }
+            else{ //Usa habilidad dos
 
-        //     }
-        //     else{
-
-        //     }
-        // }
+            }
+        }
     }
 }
 
-const p = new Personaje();
+let p = new Personaje("nombre");
+let a = new Personaje("ass");
 
-console.log(p);

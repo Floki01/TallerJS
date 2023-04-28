@@ -9,8 +9,3 @@
 // }
 
 // console.log(ataque[0].damage);
-
-const p = new Personaje();
-
-console.log(p);
-
