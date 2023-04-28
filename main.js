@@ -1,11 +1,8 @@
 
-// const ataque = require("./attacks.json");
+const ataque = require("./attacks.json");
 
+let a = ataque.filter(function(ataque){
+    return ataque.type == "PHYSICAL";
+})
 
-// for(habilidad in ataque){
-//     if(ataque[habilidad].type == "MAGIC"){
-//         console.log(ataque[habilidad]);
-//     }
-// }
-
-// console.log(ataque[0].damage);
+console.log(a);
