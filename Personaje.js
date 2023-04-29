@@ -137,7 +137,11 @@ function batalla(a,b){
         a.atacar(b);
         contador++;
     }
-    
+    if (a.estaVivo()) {
+        return a;
+      } else {
+        return b;
+      }
 }
 
 function comenzar(personajeUno, personajeDos){
@@ -153,8 +157,14 @@ function comenzar(personajeUno, personajeDos){
     else{
         batalla(b,a)
     }
+    let ganador;
+  if (Math.random() >= 0.5) {
+    ganador = batalla(personajeUno, personajeDos);
+  } else {
+    ganador = batalla(personajeDos, personajeUno);
+  }
     console.log("\n### RESUMEN ###")
-    console.log(` gana la batalla`);
+    console.log(`${ganador.nombre} gana la batalla`);
     console.log(`El fallo veces su ataque`);
     console.log(`El fallo veces su ataque`);
 }
