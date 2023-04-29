@@ -92,7 +92,9 @@
                 } else {
                     mensaje += console.log(enemigo.nombre + " ataca con " + enemigo.ataqueUno.name +"...Falla!. La vida del " + this.nombre + " se mantiene en " + this.vida);
                     mensaje += this.contratacar(enemigo);
+                    
                 }
+                
             } else {
                 if (enemigo.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) {
                     this.vida -= enemigo.ataqueUno.damage;
