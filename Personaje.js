@@ -60,30 +60,32 @@ class Personaje {
         return Math.floor(Math.random() * (10 - 1 + 1) + 1);
     }
 
+    //informacionBatalla(){} optimizar los metodos atacar y contratacar
+    // + o ${}
     atacar(enemigo) {
 
         if (this.velocidad > enemigo.velocidad) { // quien ataca primero
             if (Math.random() >= 0.5) { //usa habilidad uno
                 if (this.ataqueUno.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
                     enemigo.vida -= this.ataqueUno.damage; //daño
-                    console.log(this.nombre + " ataca con " + this.ataqueUno.name +
-                        "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida);
+                    console.log(`${this.nombre} ataca con ${this.ataqueUno.name}
+                        ...Da en el blanco!. La vida del ${enemigo.nombre} queda en ${enemigo.vida}`);
                     enemigo.contratacar(this);
                 } else { //falla
-                    console.log(this.nombre + " ataca con " + this.ataqueUno.name +
-                        "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    console.log(`${this.nombre} ataca con ${this.ataqueUno.name}
+                        ...Falla!. La vida del ${enemigo.nombre} se mantiene en ${enemigo.vida}`);
                     enemigo.contratacar(this);
                 }
 
             } else { //Usa habilidad dos
                 if (this.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
                     enemigo.vida -= this.ataqueDos.damage; //daño
-                    console.log(this.nombre + " ataca con " + this.ataqueDos.name +
-                        "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida);
+                    console.log(`${this.nombre} ataca con ${this.ataqueDos.name}
+                        ...Da en el blanco!. La vida del ${enemigo.nombre} queda en ${enemigo.vida}`);
                     enemigo.contratacar(this);
                 } else { //falla
-                    console.log(this.nombre + " ataca con " + this.ataqueDos.name +
-                        "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    console.log(`${this.nombre} ataca con ${this.ataqueDos.name}
+                    ...Falla!. La vida del ${enemigo.nombre} se mantiene en ${enemigo.vida}`);
                     enemigo.contratacar(this);
                 }
             }
