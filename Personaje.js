@@ -15,7 +15,7 @@
 
     // metodo para elegir aleatoriamente un nombre de la array ()
     generarNombre() {
-        const names = [`Claudio`, `Matias`, `Juan`, `Pedro`];
+        const names = [`Claudio`, `Matias`, `Juan`, `Pedro`,`Luis`,`Pablo`];
         const randomName = Math.floor(Math.random() * names.length);
         return names[randomName];
     }
