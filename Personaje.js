@@ -127,7 +127,7 @@
             mensaje +=this.nombre + " ataca con " + this.ataqueDos.name +"...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida;
         }
 
-        return mensaje;
+        return " "+mensaje;
     }
 
     batalla(){
@@ -145,14 +145,8 @@ let b = new Personaje("Bggg");
 function batalla(a,b){
     let txt = "";
     while(a.estaVivo() && b.estaVivo()){
-        txt =txt+"\n"+a.atacar(b)
-    let contador = 1;
-    while(a.estaVivo() && b.estaVivo()){
-        console.log(`\nTurno ${contador}`)
-        a.atacar(b)
-        contador++;
+        txt =txt+"\n"+a.atacar(b);
     }
-
     console.log(txt);
 }
 
