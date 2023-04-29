@@ -1,0 +1,11 @@
+ ### INICIAR ####
+Pedro | KNIGHT | 122 de vida vs Matias | KNIGHT | 142 de vida
+### BATALLA ###
+ Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 92 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 112
+ Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 92 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 82
+ Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 62 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 52
+ Matias ataca con Fist Uppercut...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 52
+ Matias ataca con Fist Uppercut...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 52
+ Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 22
+ Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 22
+ Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 32 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en -8
