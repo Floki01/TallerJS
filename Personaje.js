@@ -1,6 +1,6 @@
     class Personaje {
-    constructor(nombre) {
-        this.nombre = nombre;
+    constructor() {
+        this.nombre = this.generarNombre();
         this.vida = this.generarVida();
         this.velocidad = this.generarVelocidad();
         this.clase = this.asignarClase()
@@ -13,7 +13,7 @@
         return this.vida > 0;
     }
 
-    // metodo para elegir aleatoriamente un nombre de la array 
+    // metodo para elegir aleatoriamente un nombre de la array ()
     generarNombre() {
         const names = [`Claudio`, `Matias`, `Juan`, `Pedro`];
         const randomName = Math.floor(Math.random() * names.length);
@@ -136,21 +136,31 @@ let b = new Personaje("B");
 
 
 function batalla(a,b){
-
+    let contador = 1;
     while(a.estaVivo() && b.estaVivo()){
+        console.log(`\nTurno ${contador}`)
         a.atacar(b)
+        contador++;
     }
 }
 
 function comenzar(personajeUno, personajeDos){
-    console.log(personajeUno);
-    console.log(personajeDos);
+    console.log("### INICIAR ####\n");
+    console.log(`${personajeUno.nombre} | ${personajeUno.clase} | ${personajeUno.vida} de vida vs ${personajeDos.nombre} | ${personajeDos.clase} | ${personajeDos.vida} de vida`);
+
+    console.log("\n### BATALLA ###")
+
     if(Math.random() >= 0.5){
+        
         batalla(a,b)
     }
     else{
         batalla(b,a)
     }
+    console.log("\n### RESUMEN ###")
+    console.log(` gana la batalla`);
+    console.log(`El fallo veces su ataque`);
+    console.log(`El fallo veces su ataque`);
 }
 
 comenzar(a, b);
