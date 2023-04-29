@@ -131,9 +131,11 @@ let b = new Personaje("Bggg");
 
 
 function batalla(a,b){
-    
+    let contador =1 ;
     while(a.estaVivo() && b.estaVivo()){
+        console.log(`\nTurno N°${contador}`)
         a.atacar(b);
+        contador++;
     }
     
 }
