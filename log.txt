@@ -1,11 +1,35 @@
  ### INICIAR ####
-Pedro | KNIGHT | 122 de vida vs Matias | KNIGHT | 142 de vida
-### BATALLA ###
- Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 92 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 112
- Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 92 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 82
- Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 62 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 52
- Matias ataca con Fist Uppercut...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 52
- Matias ataca con Fist Uppercut...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 52
- Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en 22
- Matias ataca con Sword Stab...Falla!. La vida del Pedro se mantiene en 62 Pedro ataca con Sword Stab...Falla!. La vida del Matias se mantiene en 22
- Matias ataca con Sword Stab...Da en el blanco!. La vida del Pedro queda en 32 Pedro ataca con Sword Stab...Da en el blanco!. La vida del Matias queda en -8
+Claudio | WARRIOR | 145 de vida vs Claudio | MAGICIAN | 155 de vida
+### BATALLA ###              
+turno 1
+ Claudio ataca con Arcane Blast...Da en el blanco!. La vida del Claudio queda en 120 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 155
+turno 2
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en 108 Claudio ataca con Kick Strike...Da en el blanco!. La vida del Claudio queda en 133
+turno 3
+ Claudio ataca con Arcane Blast...Da en el blanco!. La vida del Claudio queda en 83 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 133
+turno 4
+ Claudio ataca con Earthquake...Falla!. La vida del Claudio se mantiene en 83 Claudio ataca con Kick Sweep...Da en el blanco!. La vida del Claudio queda en 123
+turno 5
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en 71 Claudio ataca con Kick Sweep...Falla!. La vida del Claudio se mantiene en 123
+turno 6
+ Claudio ataca con Arcane Blast...Da en el blanco!. La vida del Claudio queda en 46 Claudio ataca con Kick Sweep...Da en el blanco!. La vida del Claudio queda en 113
+turno 7
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en 34 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 113
+turno 8
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en 22 Claudio ataca con Kick Sweep...Falla!. La vida del Claudio se mantiene en 113
+turno 9
+ Claudio ataca con Earthquake...Falla!. La vida del Claudio se mantiene en 22 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 113
+turno 10
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en 10 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 113
+turno 11
+ Claudio ataca con Earthquake...Falla!. La vida del Claudio se mantiene en 10 Claudio ataca con Kick Strike...Da en el blanco!. La vida del Claudio queda en 91
+turno 12
+ Claudio ataca con Arcane Blast...Falla!. La vida del Claudio se mantiene en 10 Claudio ataca con Kick Sweep...Da en el blanco!. La vida del Claudio queda en 81
+turno 13
+ Claudio ataca con Arcane Blast...Falla!. La vida del Claudio se mantiene en 10 Claudio ataca con Kick Strike...Falla!. La vida del Claudio se mantiene en 81
+turno 14
+ Claudio ataca con Earthquake...Da en el blanco!. La vida del Claudio queda en -2 Claudio ataca con Kick Sweep...Falla!. La vida del Claudio se mantiene en 81
+### RESUMEN ### 
+ gana la batalla 
+El fallo veces su ataque 
+El fallo veces su ataque

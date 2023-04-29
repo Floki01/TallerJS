@@ -144,9 +144,11 @@
 
 
     function batalla(a, b) {
+        let i = 1;
         let txt = "";
         while (a.estaVivo() && b.estaVivo()) {
-            txt = txt + "\n" + a.atacar(b);
+            txt = " "+txt + "\n"+"turno "+i +"\n"+ a.atacar(b);
+            i++;
         }
         return txt;
     }
@@ -162,10 +164,8 @@
         } else {
             mensaje+=batalla(b, a);
         }
-        console.log("\n### RESUMEN ###")
-        console.log(` gana la batalla`);
-        console.log(`El fallo veces su ataque`);
-        console.log(`El fallo veces su ataque`);
+
+        mensaje+="\n### RESUMEN ###"+` \n gana la batalla`+` \nEl fallo veces su ataque`+` \nEl fallo veces su ataque`;
 
         return mensaje;
     }
@@ -177,7 +177,8 @@
         });
     }
 
-    
+
 let txt = comenzar(a, b);
 generateFileLog(txt, "log.txt")
 
+//Discupe por usar solo un archivo, no logramos usar bien los import.
