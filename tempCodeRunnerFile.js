@@ -1,5 +1,5 @@
-class batalla{
-    constructor(){
-        let a = new Personaje();
-    }
+
 }
+
+comenzar(a, b);
+
