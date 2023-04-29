@@ -1,16 +1,26 @@
-class Batalla{
 
+
+ 
+class Batalla{
     constructor(){
-        this.personajeUno = new Personaje;
-        this.personajeDos = new Personaje;
+        
     }
     
+    comenzar(personajeUno, personajeDos){
+        console.log(personajeUno);
+        console.log(personajeDos);
+        if(Math.random() >= 0.5){
+            this.batalla(personajeUno, personajeDos)
+        }
+        else{
+            this.batalla(personajeDos, personajeUno)
+        }
+    }
 
-    batalla(){
-        while(this.personajeUno.estaVivo() && this.personajeDos.estaVivo()){
+    batalla(a,b){
+        while(a.estaVivo() && personajeDos.estaVivo()){
             
         }
 
     }
 }
-

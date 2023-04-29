@@ -1,4 +1,4 @@
-class Personaje {
+    class Personaje {
     constructor(nombre) {
         this.nombre = nombre;
         this.vida = this.generarVida();
@@ -8,14 +8,9 @@ class Personaje {
         this.ataqueDos;
     }
 
-    asignarAtaque(tipo) {
-        const ataque = require("./attacks.json");
-        ataque.filter
-
-    }
 
     estaVivo() {
-        return this
+        return this.vida > 0;
     }
 
     // metodo para elegir aleatoriamente un nombre de la array 
@@ -137,16 +132,45 @@ class Personaje {
                 "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
         }
     }
+
+    batalla(){
+        let a = new Personaje("ss");
+        let b = new Personaje("dedfed");
+        console.log(a);
+    }
 }
 
 
-let b = new Personaje("b");
-let a = new Personaje("a");
+let a = new Personaje("A");
+let b = new Personaje("B");
 
-console.log("  "+a.vida);
-a.vida-=a.ataqueUno.damage;
-console.log(" "+a.vida);
 
-for (let index = 0; index < 15; index++) {
-    a.atacar(b);
+function batalla(a,b){
+
+    while(a.estaVivo() && b.estaVivo()){
+        a.atacar(b)
+    }
 }
+
+function comenzar(personajeUno, personajeDos){
+    console.log(personajeUno);
+    console.log(personajeDos);
+    if(Math.random() >= 0.5){
+        batalla(a,b)
+    }
+    else{
+        batalla(b,a)
+    }
+}
+
+comenzar(a, b);
+
+
+
+// console.log("  "+a.vida);
+// a.vida-=a.ataqueUno.damage;
+// console.log(" "+a.vida);
+
+// for (let index = 0; index < 15; index++) {
+//     a.atacar(b);
+// }
