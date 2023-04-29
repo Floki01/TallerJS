@@ -39,13 +39,12 @@ class Personaje {
     generarAtaque(clase) {
         const ataque = require("./attacks.json");
         let a;
-        if(clase == "MAGICIAN" || clase == "FAIRY"){
-            a = ataque.filter(function(ataque){
+        if (clase == "MAGICIAN" || clase == "FAIRY") {
+            a = ataque.filter(function (ataque) {
                 return ataque.type == "MAGIC";
             })
-        }
-        else{
-            a = ataque.filter(function(ataque){
+        } else {
+            a = ataque.filter(function (ataque) {
                 return ataque.type == "PHYSICAL";
             })
         }
@@ -66,64 +65,88 @@ class Personaje {
         if (this.velocidad > enemigo.velocidad) { // quien ataca primero
             if (Math.random() >= 0.5) { //usa habilidad uno
                 if (this.ataqueUno.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
-                    enemigo.vida-= this.ataqueUno.damage; //daño
-                    console.log(this.nombre + " ataca con " + this.ataqueUno.name + 
-                    "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida)
+                    enemigo.vida -= this.ataqueUno.damage; //daño
+                    console.log(this.nombre + " ataca con " + this.ataqueUno.name +
+                        "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida);
+                    enemigo.contratacar(this);
                 } else { //falla
-                    console.log(this.nombre + " ataca con " + this.ataqueUno.name + 
-                    "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    console.log(this.nombre + " ataca con " + this.ataqueUno.name +
+                        "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    enemigo.contratacar(this);
                 }
 
             } else { //Usa habilidad dos
                 if (this.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
-                    enemigo.vida-= this.ataqueDos.damage; //daño
-                    console.log(this.nombre + " ataca con " + this.ataqueDos.name + 
-                    "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida)
+                    enemigo.vida -= this.ataqueDos.damage; //daño
+                    console.log(this.nombre + " ataca con " + this.ataqueDos.name +
+                        "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida);
+                    enemigo.contratacar(this);
                 } else { //falla
-                    console.log(this.nombre + " ataca con " + this.ataqueDos.name + 
-                    "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    console.log(this.nombre + " ataca con " + this.ataqueDos.name +
+                        "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
+                    enemigo.contratacar(this);
                 }
             }
 
         } else {
             if (Math.random() >= 0.5) {
-                if (enemigo.ataqueUno.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)){
-                    this.vida-= enemigo.ataqueUno.damage;
-                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueUno.name + 
-                    "...Da en el blanco!. La vida del " + this.nombre + " queda en " + this.vida)
+                if (enemigo.ataqueUno.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) {
+                    this.vida -= enemigo.ataqueUno.damage;
+                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueUno.name +
+                        "...Da en el blanco!. La vida del " + this.nombre + " queda en " + this.vida)
+                        this.contratacar(enemigo);
+                } else {
+                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueUno.name +
+                        "...Falla!. La vida del " + this.nombre + " se mantiene en " + this.vida);
+                        this.contratacar(enemigo);
                 }
-
-                else {
-                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueUno.name + 
-                    "...Falla!. La vida del " + this.nombre + " se mantiene en " + this.vida);
+            } else {
+                if (enemigo.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) {
+                    this.vida -= enemigo.ataqueUno.damage;
+                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueDos.name +
+                        "...Da en el blanco!. La vida del " + this.nombre + " queda en " + this.vida);
+                        this.contratacar(enemigo);
+                } else {
+                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueDos.name +
+                        "...Falla!. La vida del " + this.nombre + " se mantiene en " + this.vida);
+                        this.contratacar(enemigo);
                 }
             }
-            else{
-                if (enemigo.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)){
-                    this.vida-= enemigo.ataqueDos.damage;
-                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueDos.name + 
-                    "...Da en el blanco!. La vida del " + this.nombre + " queda en " + this.vida)
-                }
 
-                else {
-                    console.log(enemigo.nombre + " ataca con " + enemigo.ataqueDos.name + 
-                    "...Falla!. La vida del " + this.nombre + " se mantiene en " + this.vida);
-                }
+        }
+    }
+
+    contratacar(enemigo) {
+        if (Math.random() >= 0.5) { //usa habilidad uno
+            if (this.ataqueUno.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
+                enemigo.vida -= this.ataqueUno.damage; //daño
+                console.log(this.nombre + " ataca con " + this.ataqueUno.name +
+                    "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida)
+            } else { //falla
+                console.log(this.nombre + " ataca con " + this.ataqueUno.name +
+                    "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
             }
-            
+        }
+         else  //Usa habilidad dos
+        if (this.ataqueDos.accuracy < Math.floor(Math.random() * (100 - 1 + 1) + 1)) { //golpea
+            enemigo.vida -= this.ataqueDos.damage; //daño
+            console.log(this.nombre + " ataca con " + this.ataqueDos.name +
+                "...Da en el blanco!. La vida del " + enemigo.nombre + " queda en " + enemigo.vida)
+        } else { //falla
+            console.log(this.nombre + " ataca con " + this.ataqueDos.name +
+                "...Falla!. La vida del " + enemigo.nombre + " se mantiene en " + enemigo.vida);
         }
     }
 }
 
+
 let b = new Personaje("b");
 let a = new Personaje("a");
 
-console.log("a"+ a.velocidad)
-console.log("b"+ b.velocidad);
+console.log("  "+a.vida);
+a.vida-=a.ataqueUno.damage;
+console.log(" "+a.vida);
 
-for (let index = 0; index < 8; index++) {
+for (let index = 0; index < 15; index++) {
     a.atacar(b);
 }
-
-console.log("a"+ a.vida)
-console.log("b"+ b.vida);
